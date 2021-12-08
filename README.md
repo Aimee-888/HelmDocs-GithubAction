@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: Aimee-888/HelmDocs@v5
+      - uses: Aimee-888/HelmDocs-GithubAction@v1
         with: 
           # provide list of dirs to run helm-docs on, seperate by comma without a space
           src_path: sample_charts,sample_charts2

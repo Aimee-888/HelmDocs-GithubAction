@@ -1,6 +1,6 @@
 name: Generate Helm Chart Documentation 
 on:
-  push:
+  pull_request:
 jobs:
   generate-helm-docs:
     runs-on: ubuntu-latest
