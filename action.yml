@@ -1,0 +1,45 @@
+name: 'HelmDocs Action'
+description: 'GitHub Action for automatically generating Documentation for Helm Charts '
+author: ''
+inputs:
+  src_path: 
+    description: 'Provide Paths in which to run the helm-docs command, will be run recursively. Otherwise will use .' 
+    default: . 
+    required: false
+  template_file: 
+    description: 'Provide template file for helm-docs' 
+    required: false
+  ignored_dirs: 
+    description: 'Dirs to ignore'
+    required: false
+  commit_message:
+    description: 'Custom git commit message.'
+    required: false
+    default: 'Updating README.md via GithubActions with helm-docs'
+  username:
+    description: 'The GitHub username to associate commits made by this GitHub action'
+    required: false
+    default: 'github-actions-bot'
+  email:
+    description: 'The email used for associating commits made by this GitHub action'
+    required: false
+    default: 'github-actions-bot@mail.com'
+  git_push: 
+    description: 'Configure, whether changes shall be commited and pushed'
+    required: false
+    default: "true"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.personal_token }}
+    - ${{ inputs.src_path }}
+    - ${{ inputs.commit_message }}
+    - ${{ inputs.username }}
+    - ${{ inputs.email }}
+    - ${{ inputs.template_file }}
+    - ${{ inputs.ignored_dirs }}
+
+branding:
+  icon: 'copy'
+  color: 'red'

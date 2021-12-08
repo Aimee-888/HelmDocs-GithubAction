@@ -1,0 +1,20 @@
+name: Generate Helm Chart Documentation 
+on:
+  push:
+jobs:
+  generate-helm-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Aimee-888/HelmDocs@v5
+        with: 
+          # provide list of dir to helm-docs on, seperate by comma with a space ", "
+          src_path: sample_charts, sample_charts2
+          # template_file: README.md.gotmpl
+          # provide list of dir to ignore, seperated by comma with a space ", "
+          ignored_dirs: dir1, dir2
+          # commit_message: "Updating README.md via GithubActions with helm-docs"
+          # username: """
+          # email: ""
+          git_push: true
+
