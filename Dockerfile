@@ -1,4 +1,4 @@
-# FROM alpine:3.10
+
 FROM jnorwood/helm-docs:latest
 
 RUN apk add --no-cache bash
