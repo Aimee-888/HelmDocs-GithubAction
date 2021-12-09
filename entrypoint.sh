@@ -16,7 +16,12 @@ echo "-----Information:---------------------------"
 git --version
 helm-docs --version
 echo "Base path is: $BASE_PATH"
-echo "Templates file location is: $TEMPLATE_FILE "
+if ["${TEMPLATE_FILE}" != "" ] 
+then
+    echo "Templates file location is: $TEMPLATE_FILE"
+else
+    echo "Template file is not provided"
+fi
 
 echo "----.helmdocsignore Status:----------------"
 
