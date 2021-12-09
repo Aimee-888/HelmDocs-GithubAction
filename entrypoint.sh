@@ -61,11 +61,6 @@ else
     done
 fi 
 
-# Check if SRC_PATH is provided 
-if [[ -z "$SRC_PATH" ]]; then
-    echo "SRC_PATH environment variable is missing. Cannot proceed."
-    exit 1
-fi
 
 
 git config --global user.name "${USERNAME}"
