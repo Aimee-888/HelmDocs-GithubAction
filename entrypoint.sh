@@ -73,7 +73,7 @@ then
     echo "No changes detected - nothing changed or pushed"
 else
     echo "git_push is set to: ${GIT_PUSH}"
-    if [ ${GIT_PUSH} == "true" ]
+    if [ "${GIT_PUSH}" == "true" ]
     then 
         # commit and push changes
         echo "Changes detected - will commit & push"
