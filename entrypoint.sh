@@ -67,8 +67,6 @@ else
     done
 fi 
 
-
-
 git config --global user.name "${USERNAME}"
 git config --global user.email "${EMAIL}"
 
@@ -82,7 +80,7 @@ else
     if [ "${GIT_PUSH}" == "true" ]
     then 
         # commit and push changes
-        echo "Changes detected - will commit & push"
+        echo "Changes detected - will commit and push"
         git add -A
         git commit --message "${COMMIT_MESSAGE}"
         git push origin 

@@ -48,6 +48,6 @@ The following input variable options can be configured:
 |`username`|Optional|The GitHub username to associate commits made by this GitHub action.| `github-actions-bot`|
 |`email`|Optional|The email used for associating commits made by this GitHub action| `github-actions-bot@mail.com`|
 |`commit_message`|Optional|A custom git commit message| "Updating `README.md` via GithubActions (helm-docs)" |
-|`git_push`|Optional|Configure whether changes shall be committed and pushed or not|true|
+|`git_push`|Optional|Configure whether changes shall be committed and pushed or not|false|
 
 
