@@ -27,7 +27,7 @@ inputs:
   git_push: 
     description: 'Configure, whether changes shall be commited and pushed or not'
     required: false
-    default: "true"
+    default: "false"
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -39,6 +39,7 @@ runs:
     - ${{ inputs.email }}
     - ${{ inputs.template_file }}
     - ${{ inputs.ignored_dirs }}
+    - ${{ inputs.git_push }}
 
 branding:
   icon: 'copy'
